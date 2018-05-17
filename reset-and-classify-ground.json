@@ -1,0 +1,11 @@
+{
+    "pipeline": [
+        {
+            "type": "filters.assign",
+            "assignment": "Classification[:]=0"
+        },
+        {
+            "type": "filters.smrf"
+        }
+    ]
+}
