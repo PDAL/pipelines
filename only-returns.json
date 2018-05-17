@@ -1,0 +1,8 @@
+{
+    "pipeline": [
+        {
+            "type": "filters.range",
+            "limits": "NumberOfReturns[1:1]"
+        }
+    ]
+}
