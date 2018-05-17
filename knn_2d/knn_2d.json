@@ -1,0 +1,20 @@
+{
+  "pipeline":[
+    { "type": "readers.las",
+      "filename": "input.las"
+    },
+    {
+      "type":"filters.python",
+      "script":"knn_2d.py",
+      "function":"knn_2d",
+      "module":"any",
+      "add_dimension":"Density2D"
+    },
+    {
+      "type":"writers.las",
+      "filename":"filtered.las",
+      "extra_dims": "Density2D=float",
+      "compression": "off"
+    }
+  ]
+}
