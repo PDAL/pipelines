@@ -1,0 +1,21 @@
+{
+    "pipeline":[
+        {
+            "type":"readers.text",
+            "filename":"/path/to/PC3.txt",
+            "header":"X,Y,Z,Intensity,ReturnNumber"
+        },
+        {
+            "type":"filters.ferry",
+            "dimensions":"=>Classification"
+        },
+        {
+            "type":"writers.text",
+            "filename":"/path/to/CLS.txt",
+            "order":"Classification",
+            "precision":0,
+            "keep_unspecified":false,
+            "write_header":false
+        }
+    ]
+}
