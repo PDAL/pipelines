@@ -1,0 +1,15 @@
+[
+    "/path/to/moving.laz",
+    {
+        "type": "filters.python",
+        "script": "registration.py",
+        "function": "filter",
+        "module": "all",
+        "pdalargs": "{\"threshold\": 10.0, \"global_alignment\": true, \"global_alignment_voxel_size\": 3.0, \"method\": \"feat\", \"max_iters\": 30, \"voxel_size\": 1.0, \"filename\": \"/path/to/fixed.laz\"}"
+    },
+    {
+        "type": "writers.las",
+        "forward": "all",
+        "filename": "/path/to/aligned.laz"
+    }
+]

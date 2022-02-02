@@ -1,0 +1,12 @@
+name: grid
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - cmake
+  - pandas
+  - pip
+  - python
+  - python-pdal
+  - scipy
+  - setuptools
